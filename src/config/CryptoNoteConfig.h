@@ -17,7 +17,7 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t DIFFICULTY_TARGET                             = 32; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 24; // seconds
 
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
@@ -41,11 +41,11 @@ const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 2;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 3;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 4;
 
-const unsigned EMISSION_SPEED_FACTOR                         = 25;
+const unsigned EMISSION_SPEED_FACTOR                         = 24;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(500000000000000);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(320000000000000);
 
 /* How to generate a premine:
 
@@ -88,22 +88,22 @@ const uint64_t MINIMUM_FEE                                   = UINT64_C(100);
 
 /* This section defines our minimum and maximum mixin counts required for transactions */
 const uint64_t MINIMUM_MIXIN_V1                              = 0;
-const uint64_t MAXIMUM_MIXIN_V1                              = 100;
+const uint64_t MAXIMUM_MIXIN_V1                              = 5;
 
 const uint64_t MINIMUM_MIXIN_V2                              = 0;
-const uint64_t MAXIMUM_MIXIN_V2                              = 10;
+const uint64_t MAXIMUM_MIXIN_V2                              = 8;
 
 const uint64_t MINIMUM_MIXIN_V3                              = 0;
-const uint64_t MAXIMUM_MIXIN_V3                              = 15;
+const uint64_t MAXIMUM_MIXIN_V3                              = 10;
 
 /* The heights to activate the mixin limits at */
-const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 1000000;
-const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 5000000;
-const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 8000000;
+const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 440000;
+const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 800000;
+const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 1000000;
 
 /* The mixin to use by default with zedwallet and turtle-service */
 /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
-const uint64_t DEFAULT_MIXIN_V0                              = 4;
+const uint64_t DEFAULT_MIXIN_V0                              = 3;
 const uint64_t DEFAULT_MIXIN_V1                              = MAXIMUM_MIXIN_V1;
 const uint64_t DEFAULT_MIXIN_V2                              = MAXIMUM_MIXIN_V2;
 const uint64_t DEFAULT_MIXIN_V3                              = MAXIMUM_MIXIN_V3;
@@ -216,8 +216,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const uint64_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  23897;
-const int      RPC_DEFAULT_PORT                              =  23896;
+const int      P2P_DEFAULT_PORT                              =  14451;
+const int      RPC_DEFAULT_PORT                              =  14485;
 const int      SERVICE_DEFAULT_PORT                          =  8337;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
@@ -257,17 +257,17 @@ const char LATEST_VERSION_URL[] = "https://github.com/TRRXITTE";
 const std::string LICENSE_URL = "https://github.com/TRRXITTE/traaitt/blob/master/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0xb3, 0x3c, 0x4a, 0x6c, 0xcf, 0x53, 0x57, 0x44, 0x65, 0xf9, 0x91, 0xa4, 0xb6, 0xc1, 0x43, 0xe9  }
+    {0xb8, 0x1c, 0x4a, 0x1c, 0xcf, 0x56, 0x57, 0x45, 0x65, 0xf4, 0x93, 0xa3, 0xb3, 0xc1, 0x43, 0xe3}
 };
 
 const char* const SEED_NODES[] = {
-  "35.234.143.169:23897",//EUSEEDNODE
-  "34.65.28.154:23897", //EUSEEDNODE
-  "35.204.35.116:23897",//EUSEEDNODE
-  "34.77.107.221:23897", //EUSEEDNODE
-  "35.185.104.116:23897", //USASEEDNODE
-  "35.236.125.196:23897", //USASEEDNODE
-  "35.188.11.69:23897", //USASEEDNODE
-  "34.83.26.55:23897" //USASEEDNODE
+      "35.241.111.255:14451", //XTE WORLDWIDE
+      "34.64.172.203:14451", //XTE WORLDWIDE
+      "34.87.112.219:14451", //XTE WORLDWIDE
+      "35.246.10.246:14451", //XTE WORLDWIDE
+	  "34.107.123.203:14451", //XTE WORLDWIDE
+      "34.95.173.217:14451", //XTE WORLDWIDE
+      "34.86.103.64:14451", //XTE WORLDWIDE
+      "34.106.203.152:14451" //XTE WORLDWIDE
 };
 } // CryptoNote
