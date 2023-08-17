@@ -58,7 +58,7 @@ const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(32000000
 --print-genesis-tx --genesis-block-reward-address <premine wallet address>
 
 For example:
-TurtleCoind --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW
+./XTEnetwork --print-genesis-tx --genesis-block-reward-address XT2LD4w2FWZNcRCG4cYxfu8Bd1GjVziQ9Gv8MpK8NdXXg7uwJsbfXoYaGuJT2wqfMPapcjj4gmVasKvXLNnYxrDR1tVjhwwcP
 
 * Take the hash printed, and replace it with the hash below in GENESIS_COINBASE_TX_HEX
 
